@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .cell {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cell[data-player="Player1"] {
+    background-color: #e63946;
+  }
+  
+  .cell[data-player="Player2"] {
+    background-color: #2a9d8f;
+  }
+  
+  .cell:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  #status {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
+  }
+
+  #win-message {
+    font-size: 1.5em;
+    color: #000;
+    font-weight: bold;
+  }
