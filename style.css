@@ -4,6 +4,10 @@ body {
     margin: 20px;
     background-color: #f0f0f0;
   }
+
+  .hidden {
+    display: none;
+}
   
   #game-board {
     display: grid;
@@ -47,3 +51,114 @@ body {
     color: #000;
     font-weight: bold;
   }
+
+  #reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  #reset-button:hover {
+    background-color: #0056b3;
+  }
+
+  #reset-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  #game-over {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #e63946;
+  }
+
+  #game-over.hidden {
+    display: none;
+  }
+
+  #game-over.visible {
+    display: block;
+  }
+
+  #game-over p {
+    margin: 0;
+  }
+
+  #chat-container {
+    margin-top: 20px;
+  }
+
+  #chat-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 150px;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 8px;
+    margin: 8px;
+  }
+
+  #chat-input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  #send-chat {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+
+  #send-chat:hover {
+    background-color: #0056b3;
+  }
+
+  #send-chat:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  /* style.css */
+
+/* ... (your existing CSS) ... */
+
+#chat-box .chat-message { /* Common styling for all chat messages */
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: left;
+}
+
+#chat-box .player1-message {
+  color: #e63946; /* Example color for Player 1 (matches their game piece) */
+  /* You could also add a light background or other distinctions */
+  /* background-color: #fdecea; */
+  /* text-align: left; */ /* Optional: align messages differently */
+}
+
+#chat-box .player2-message {
+  color: #2a9d8f; /* Example color for Player 2 (matches their game piece) */
+  /* background-color: #eaf6f5; */
+  /* text-align: right; */ /* Optional: align messages differently */
+}
+
+/* If you want to include the player's name and style it */
+#chat-box .chat-message .sender-name {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+
+/* ... (rest of your existing CSS) ... */

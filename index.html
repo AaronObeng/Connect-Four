@@ -4,14 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect 4 - Client</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <h1 style="color: blue;">Connect 4</h1>
-    <div id="game-board"></div>
+    <!-- <div id="game-board"></div>
     <div id="status">Waiting for game to start...</div>
-    <div id="win-message" class="hidden">Winner: <span id="winner-name"></span></div>
+    <div id="win-message" class="hidden">Winner: <span id="winner-name"></span></div> -->
+    <div id="game-container">
+    <!-- ... your existing game board and status elements ... -->
+      <div id="status">Waiting for opponent...</div>
+      <div id="game-board"></div>
+      <div id="win-message" class="hidden">
+          Winner: <span id="winner-name"></span>
+      </div>
+      <br>
+      <!-- Add this button -->
+      <button id="reset-button" class="hidden">Play Again?</button>
+      
+        <!-- Cells will be generated here by JavaScript -->
+    </div>
+    <br>
+    <div id="chat-container">
+      <div id="chat-box"></div>
+      <br>
+      <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Type your message..." />
+        <button id="send-chat">Send</button>
+      </div>
+    </div>
 
-    <script src="client.js"></script>
+    <script src="./client.js"></script>
   </body>
 </html>
